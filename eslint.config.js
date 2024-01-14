@@ -9,6 +9,7 @@ export default eslintConfig({
     typescript: true,
     rules: {
         'no-console': 'off',
+        'antfu/top-level-function': 'off',
         'curly': ['error', 'multi-line'],
         'style/member-delimiter-style': [
             'error',

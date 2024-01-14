@@ -9,7 +9,10 @@
 
     const script = document.createElement('script');
     script.type = 'module';
-    script.setAttribute('src', todo!());
+    script.setAttribute(
+        'src',
+        'https://raw.githubusercontent.com/1zumii/bilibili-watchlater-sorter/main/output/index.js'
+    );
 
     head.appendChild(script);
 })();
