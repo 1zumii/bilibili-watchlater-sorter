@@ -1,5 +1,4 @@
 (async () => {
-    console.log(
-        JSON.parse(JSON.stringify(window.__INITIAL_STATE__)),
-    );
+    const videos = window.__INITIAL_STATE__.resourceList;
+    console.log(videos);
 })();

@@ -4,16 +4,14 @@
 > Chrome 禁止直接粘贴，需要先输入 `allow pasting`
 
 ```js
-(() => {
-    const head = document.head ?? document.getElementsByTagName('head')[0];
+(async () => {
+    const response = await fetch('https://raw.githubusercontent.com/1zumii/bilibili-watchlater-sorter/main/output/index.js');
+    const scriptContent = await response.text();
 
     const script = document.createElement('script');
     script.type = 'module';
-    script.setAttribute(
-        'src',
-        'https://raw.githubusercontent.com/1zumii/bilibili-watchlater-sorter/main/output/index.js'
-    );
+    script.text = scriptContent;
 
-    head.appendChild(script);
+    document.body.appendChild(script);
 })();
 ```
