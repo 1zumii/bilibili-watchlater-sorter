@@ -10,7 +10,9 @@ export default eslintConfig({
     rules: {
         'no-console': 'off',
         'antfu/top-level-function': 'off',
+        'ts/consistent-type-definitions': 'off',
         'curly': ['error', 'multi-line'],
+        'style/brace-style': ['error', '1tbs', { allowSingleLine: true }],
         'style/member-delimiter-style': [
             'error',
             {

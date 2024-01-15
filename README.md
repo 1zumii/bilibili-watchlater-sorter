@@ -5,7 +5,11 @@
 
 ```js
 (async () => {
-    const response = await fetch('https://raw.githubusercontent.com/1zumii/bilibili-watchlater-sorter/main/output/index.js');
+    const BASE_URL = 'https://raw.githubusercontent.com/1zumii/bilibili-watchlater-sorter';
+    const BRANCH = 'main';
+    const SCRIPT_PATH = 'output/index.js';
+
+    const response = await fetch([BASE_URL, BRANCH, SCRIPT_PATH].join('/'));
     const scriptContent = await response.text();
 
     const script = document.createElement('script');

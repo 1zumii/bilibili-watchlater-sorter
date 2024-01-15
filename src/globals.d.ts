@@ -1,13 +1,11 @@
+import type { ResourceVideo, Sorter } from './types';
+
 declare global {
     interface Window {
         __INITIAL_STATE__: {
-            resourceList: {
-                bv_id: string;
-                title: string;
-            }[];
+            resourceList: ResourceVideo[];
             [prop: string]: unknown;
         };
+        sorter: Sorter;
     }
 }
-
-export { };
