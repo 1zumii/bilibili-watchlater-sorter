@@ -58,8 +58,18 @@ const createSorter = (videos)=>{
                 ...video,
                 upper: video.upper.name,
                 publishTime: (()=>{
-                    const date = new Date(video.publishTime);
-                    return `${date.getFullYear()}年${date.getMonth() + 1}月${date.getDate()}日`;
+                    const date = new Date(video.publishTime * 1000);
+                    return [
+                        `${date.getFullYear()}年`,
+                        `${date.getMonth() + 1}月`,
+                        `${date.getDate()}日`,
+                        ' ',
+                        date.getHours(),
+                        ':',
+                        date.getMinutes(),
+                        ':',
+                        date.getSeconds()
+                    ].join('');
                 })()
             })));
     };
